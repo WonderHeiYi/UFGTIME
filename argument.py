@@ -8,7 +8,7 @@ def get_args():
     )
     parser.add_argument(
         '--data_name', type=str, default='Covid', help='data set',
-            choices=['ECG', 'ETTh1', 'ETTh2', 'ETTm1', 'ETTm2', 'Electricity', 'Solar',
+            help=['ECG', 'ETTh1', 'ETTh2', 'ETTm1', 'ETTm2', 'Electricity', 'Solar',
                     'Covid', 'Traffic', 'Wiki500' ]
     )
     parser.add_argument(
@@ -36,7 +36,7 @@ def get_args():
         '--hidden_size', type=int, default=128, help='hidden dimensions of model'
     )
     parser.add_argument(
-        '--k', type=int, default=4, help='number of neighbors of KNN Graph'
+        '--k', type=int, default=2, help='number of neighbors of KNN Graph'
     )
     parser.add_argument(
         '--cheb_order', type=int, default=2,
@@ -46,7 +46,7 @@ def get_args():
         '--lev', type=int, default=1, help='level of framelet transform'
     )
     parser.add_argument(
-        '--s', type=float, default=7.533034289466433, help='framelet dilation scale (> 1)'
+        '--s', type=float, default=2, help='framelet dilation scale (> 1)'
     )
     parser.add_argument(
         '--frame_type', type=str, default='Haar', help='frame type',
@@ -60,10 +60,10 @@ def get_args():
         '--batch_size', type=int, default=128, help='input data batch size'
     )
     parser.add_argument(
-        '--learning_rate', type=float, default=0.003971709943520522, help='learning rate'
+        '--learning_rate', type=float, default=0.005, help='learning rate'
     )
     parser.add_argument(
-        '--decay_rate', type=float, default=0.04883689490804201
+        '--decay_rate', type=float, default=0.005
     )
     parser.add_argument(
         '--device', type=str, default='cuda:0', help='device'

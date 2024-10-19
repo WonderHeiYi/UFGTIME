@@ -7,7 +7,7 @@ import numpy as np
 import optuna
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from src.model import FreqTimeUFGV2, FGN, Model
-from src.utils import evaluate, set_seed, get_frame, cheb_approx
+from src.utils import evaluate, set_seed, get_frame, cheb_approx, load_config
 from src.data_provider import data_provider
 from argument import get_args
 import pandas as pd
@@ -15,13 +15,41 @@ import pandas as pd
 if __name__ == '__main__':
 
     args = get_args()
-    # def run_tune(trial):
-    #     args = args_trials(trial, args=get_args())
-    # print(f'Training configs: {args}')
+
 
     # init seed and device
     set_seed(args.seed)
     device = torch.device(args.device if torch.cuda.is_available() else "cpu")
+    
+    # load config yaml
+    model_config = load_config('./config/ufgtime_config.yaml')
+    args.learning_rate = model_config[args.data_name]['learning_rate']
+    args.decay_rate = model_config[args.data_name]['decay_rate']
+    args.hidden_size = model_config[args.data_name]['hidden_size']
+    args.signal_len = model_config[args.data_name]['signal_len']
+    args.batch_size = model_config[args.data_name]['batch_size']
+    args.cheb_order = model_config[args.data_name]['cheb_order']
+    args.k = model_config[args.data_name]['k']
+    args.s = model_config[args.data_name]['s']
+    args.long_pred = model_config[args.data_name]['long_pred']
+    
+    if args.data_name in ['ETTh1_96', 'ETTh2_96', 'ETTm1_96', 'ETTm2_96']:
+        args.data_name = args.data_name.replace('_96', '')
+        args.seq_len = 336
+        args.pred_len = 96
+    elif args.data_name in ['ETTh1_192', 'ETTh2_192', 'ETTm1_192', 'ETTm2_192']:
+        args.data_name = args.data_name.replace('_192', '')
+        args.seq_len = 336
+        args.pred_len = 192
+    elif args.data_name in ['ETTh1_336', 'ETTh2_336', 'ETTm1_336', 'ETTm2_336']:
+        args.data_name = args.data_name.replace('_336', '')
+        args.seq_len = 336
+        args.pred_len = 336
+    elif args.data_name in ['ETTh1_720', 'ETTh2_720', 'ETTm1_720', 'ETTm2_720']:
+        args.data_name = args.data_name.replace('_720', '')
+        args.seq_len = 336
+        args.pred_len = 720
+    
     # data loading
     train_set, train_dataloader = data_provider(
                         root_path=args.root_path,

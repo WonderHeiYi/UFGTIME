@@ -1,0 +1,241 @@
+ECG:
+  learning_rate: 0.003971709943520522
+  decay_rate: 0.04883689490804201
+  hidden_size: 32
+  signal_len: 16
+  cheb_order: 2
+  k: 2
+  s: 1.7819100178824934
+  batch_size: 128
+  long_pred: 0
+
+Covid:
+  learning_rate: 0.003491879632024443
+  decay_rate: 0.04283477743214707
+  hidden_size: 128
+  signal_len: 16
+  cheb_order: 2
+  k: 4
+  s: 7.533034289466433
+  batch_size: 16
+  long_pred: 0
+
+Electricity:
+  learning_rate: 0.0021911971692190864
+  decay_rate: 0.028852240829232177
+  hidden_size: 16
+  signal_len: 16
+  cheb_order: 2
+  k: 2
+  s: 9.198551332710885
+  batch_size: 128
+  long_pred: 0
+
+Solar:
+  learning_rate: 0.002338300285464418
+  decay_rate: 0.04234248918128015
+  hidden_size: 16
+  signal_len: 16
+  cheb_order: 2
+  k: 2
+  s: 3.0089854026875726
+  batch_size: 128
+  long_pred: 0
+
+Traffic:
+  learning_rate: 0.0038122150596916616
+  decay_rate: 0.016224470023661754
+  hidden_size: 16
+  signal_len: 16
+  cheb_order: 3
+  k: 2
+  s: 6.872585135887683
+  batch_size: 64
+  long_pred: 0
+
+Wiki500:
+  learning_rate: 0.0015717288412341536
+  decay_rate: 0.000947505411175977
+  hidden_size: 32
+  signal_len: 8
+  cheb_order: 3
+  k: 2
+  s: 2.6103172012180265
+  batch_size: 16
+  long_pred: 0
+
+ETTh2_96:
+  learning_rate: 0.0001710133640231015
+  decay_rate: 0.004785280840446912
+  hidden_size: 64
+  signal_len: 32
+  cheb_order: 3
+  k: 2
+  s: 9.773978495695525
+  batch_size: 512
+  long_pred: 1
+
+ETTh2_192:
+  learning_rate: 2.5266678326629375e-05
+  decay_rate: 0.0046417608195747796
+  hidden_size: 16
+  signal_len: 128
+  cheb_order: 3
+  k: 2
+  s: 2.0051809998350274
+  batch_size: 512
+  long_pred: 1
+
+ETTh2_336:
+  learning_rate: 0.0019066640276508074
+  decay_rate: 0.014829462366904368
+  hidden_size: 32
+  signal_len: 64
+  cheb_order: 3
+  k: 8
+  s: 4.573835957768647
+  batch_size: 64
+  long_pred: 1
+
+ETTh2_720:
+  learning_rate: 1.3046151522673921e-05
+  decay_rate: 0.03549015299400024
+  hidden_size: 32
+  signal_len: 16
+  cheb_order: 3
+  k: 2
+  s: 4.2158159397176895
+  batch_size: 128
+  long_pred: 1
+
+ETTm2_96:
+  learning_rate: 0.002944960458094473
+  decay_rate: 0.001589012179663436
+  hidden_size: 16
+  signal_len: 32
+  cheb_order: 3
+  k: 2
+  s: 6.64770424020371
+  batch_size: 256
+  long_pred: 1
+
+ETTm2_192:
+  learning_rate: 0.003144236273293471
+  decay_rate: 0.03678362909669433
+  hidden_size: 16
+  signal_len: 32
+  cheb_order: 3
+  k: 2
+  s: 6.175302273851203
+  batch_size: 512
+  long_pred: 1
+
+ETTm2_336:
+  learning_rate: 0.002396175391247331
+  decay_rate: 0.021562104347784064
+  hidden_size: 32
+  signal_len: 32
+  cheb_order: 3
+  k: 2
+  s: 4.530267542724698
+  batch_size: 512
+  long_pred: 1
+
+ETTm2_720:
+  learning_rate: 0.00266570005872484
+  decay_rate: 0.022036253242716797
+  hidden_size: 64
+  signal_len: 32
+  cheb_order: 2
+  k: 2
+  s: 2.9793003135295724
+  batch_size: 512
+  long_pred: 1
+
+ETTm1_96:
+  learning_rate: 0.0038827387929045547
+  decay_rate: 0.018413408159107806
+  hidden_size: 64
+  signal_len: 64
+  cheb_order: 2
+  k: 2
+  s: 4.7205529540544795
+  batch_size: 512
+  long_pred: 1
+
+ETTm1_192:
+  learning_rate: 0.0005487311693165211
+  decay_rate: 0.023231196011356214
+  hidden_size: 32
+  signal_len: 16
+  cheb_order: 3
+  k: 2
+  s: 3.430570867428292
+  batch_size: 256
+  long_pred: 1
+
+ETTm1_336:
+  learning_rate: 0.00235201650617145
+  decay_rate: 0.03804966087454027
+  hidden_size: 64
+  signal_len: 16
+  cheb_order: 3
+  k: 2
+  s: 4.806951294839909
+  batch_size: 256
+  long_pred: 1
+
+ETTm1_720:
+  learning_rate: 0.0009383027777167011
+  decay_rate: 0.04931089161762801
+  hidden_size: 16
+  signal_len: 128
+  cheb_order: 2
+  k: 2
+  s: 6.578768704214061
+  batch_size: 256
+  long_pred: 1
+
+ETTh1_96:
+  learning_rate: 0.00500011187432398
+  decay_rate: 0.03690423397667149
+  hidden_size: 32
+  signal_len: 16
+  cheb_order: 2
+  k: 2
+  s: 6.6557458767055255
+  batch_size: 128
+  long_pred: 1
+
+ETTh1_192:
+  learning_rate: 0.0018390040992826346
+  decay_rate: 0.03928674292009237
+  hidden_size: 16
+  signal_len: 128
+  cheb_order: 2
+  k: 2
+  s: 3.930774998431199
+  batch_size: 64
+  long_pred: 1
+
+ETTh1_336:
+  learning_rate: 0.0018605283317654937
+  decay_rate: 0.0017995969735932907
+  hidden_size: 16
+  signal_len: 128
+  cheb_order: 3
+  k: 2
+  s: 2.563436716060746
+  batch_size: 128
+  long_pred: 1
+
+ETTh1_720:
+  learning_rate: 0.0012086622882789642
+  decay_rate: 0.020887759063483134
+  hidden_size: 16
+  signal_len: 64
+  cheb_order: 2
+  k: 2
+  s: 8.333630247373009
+  batch_size: 64
+  long_pred: 1

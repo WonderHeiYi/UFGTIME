@@ -2,7 +2,7 @@
 import os
 import math
 import random
-
+import yaml
 import torch
 import torch.nn as nn
 import numpy as np 
@@ -11,6 +11,13 @@ import pandas as pd
 from typing import List
 from pandas.tseries import offsets
 from pandas.tseries.frequencies import to_offset
+
+
+def load_config(config_path):
+    with open(config_path, 'r') as file:
+        config = yaml.safe_load(file)
+    return config
+
 
 def set_seed(seed: int = 42) -> None:
     np.random.seed(seed)
