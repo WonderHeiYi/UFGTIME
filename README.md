@@ -22,7 +22,7 @@ Our proposed UFGTime framework is implemented in Python 3.10 and major libraries
 ## 	:weight_lifting: To Train Model:
 
 ```bash
-python main.py --dataset [dataset]
+python main.py --data_name [dataset]
 ```
 
 ## :open_file_folder: File Specifications
@@ -37,6 +37,6 @@ python main.py --dataset [dataset]
 
 ## Implementation
 Datasets include `ECG`, `Covid`, `Electricity`, `Solar`, `Traffic`, `Wiki500`, `ETTh2_96`, `ETTh2_192`, `ETTh2_336`, `ETTh2_720`, `ETTm2_96`, `ETTm2_192`, `ETTm2_336`, `ETTm2_720`, `ETTm1_96`, `ETTm1_192`, `ETTm1_336`, `ETTm1_720`, `ETTh1_96`, `ETTh1_192`, `ETTh1_336`, `ETTh1_720`
-### To reproduce our experiements, please run (example):
+### To reproduce our experiments, please run (example):
 `python main.py --data_name ECG` 
-Please subustitue the `data_name` from above dataset options to reproduce the experiment.
+Please substitute the `data_name` from the above dataset options to reproduce the experiment.
