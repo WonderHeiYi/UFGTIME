@@ -3,7 +3,7 @@
 
 UFGTtime transforms time series into frequency domain signals, preserving sequential information, and introduces a hyperspectral graph structure with sparse topological connections to enhance attention to cross-signal relationships, while mitigating smoothing effects through a global framelet message-passing operator.
 <p>
-  <img src="./flowchart.jpg" width="1000">
+  <img src="./Structure.jpg" width="1000">
   <br />
 </p>
 
