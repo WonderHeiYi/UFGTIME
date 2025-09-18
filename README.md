@@ -25,6 +25,9 @@ Our proposed UFGTime framework is implemented in Python 3.10 and major libraries
 python main.py --dataset [dataset]
 ```
 
+##  :open_file_folder: Download datasets
+Please head to this link to download the zipped datasets and and put all unzipped files into the `data` folder in the root directory: https://drive.google.com/file/d/1v0G-PRKgof-ctR2tfXMPwKB2DqggZoyG/view?usp=sharing
+
 ## :open_file_folder: File Specifications
 
 - **data**: Dict of data sources
