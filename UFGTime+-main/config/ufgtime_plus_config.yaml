@@ -1,0 +1,304 @@
+# null disables the scheduler. Unrecorded short-term patience is treated as disabled.
+# Recorded trial 495, test MAE 0.052135141.
+ECG: &short_term
+  seq_len: 12
+  pred_len: 12
+  embed_size: 128
+  train_epochs: 100
+  scheduler_patience: null
+  long_pred: 0
+  window_centering: none
+  checkpoint_selection: best_val
+  learning_rate: 0.01343975042216825
+  decay_rate: 1.2707819502804139e-05
+  beta1: 0.95
+  beta2: 0.99
+  hidden_size: 64
+  signal_len: 16
+  cheb_order: 3
+  k: 3
+  s: 9.844074760441869
+  batch_size: 128
+
+# Recorded trial 354, test MAE 0.174801047.
+Covid:
+  <<: *short_term
+  learning_rate: 0.03128031399306517
+  decay_rate: 1.5345069130003286e-05
+  beta1: 0.9
+  beta2: 0.95
+  hidden_size: 512
+  signal_len: 16
+  cheb_order: 2
+  k: 6
+  s: 9.473586341991929
+  batch_size: 16
+
+# Recorded trial 366, test MAE 0.068943364.
+Electricity:
+  <<: *short_term
+  scheduler_patience: 10
+  learning_rate: 0.032969051820992155
+  decay_rate: 1.486582188472028e-05
+  beta1: 0.9
+  beta2: 0.999
+  hidden_size: 64
+  signal_len: 16
+  cheb_order: 3
+  k: 8
+  s: 3.3508258578893586
+  batch_size: 128
+
+# Recorded trial 332, test MAE 0.076300019.
+Solar:
+  <<: *short_term
+  learning_rate: 0.0032529422227779562
+  decay_rate: 2.3901314779162602e-05
+  beta1: 0.9
+  beta2: 0.999
+  hidden_size: 32
+  signal_len: 16
+  cheb_order: 2
+  k: 2
+  s: 1.3718014732719637
+  batch_size: 32
+
+# Recorded trial 33, test MAE 0.031772043.
+Traffic:
+  <<: *short_term
+  learning_rate: 0.016553107475149122
+  decay_rate: 1.793710728844753e-05
+  beta1: 0.9
+  beta2: 0.99
+  hidden_size: 32
+  signal_len: 16
+  cheb_order: 2
+  k: 9
+  s: 9.209729792259472
+  batch_size: 128
+
+# Recorded trial 354, test MAE 0.046174871.
+Wiki500:
+  <<: *short_term
+  scheduler_patience: 10
+  learning_rate: 0.008147596489388655
+  decay_rate: 1.4753700436874906e-05
+  beta1: 0.9
+  beta2: 0.999
+  hidden_size: 16
+  signal_len: 8
+  cheb_order: 2
+  k: 10
+  s: 1.3926947774415808
+  batch_size: 16
+
+# Recorded trial 315, test MAE 0.026396296.
+exchange:
+  <<: *short_term
+  scheduler_patience: 10
+  learning_rate: 0.0039877064453043305
+  decay_rate: 1.1328129014050974e-05
+  beta1: 0.9
+  beta2: 0.999
+  hidden_size: 16
+  signal_len: 16
+  cheb_order: 3
+  k: 5
+  s: 7.08752455402401
+  batch_size: 16
+
+# Recorded trial 143, test MAE 0.096417444.
+fred_md:
+  <<: *short_term
+  learning_rate: 0.008361991693040426
+  decay_rate: 0.00017109579355171402
+  beta1: 0.95
+  beta2: 0.95
+  hidden_size: 16
+  signal_len: 16
+  cheb_order: 2
+  k: 7
+  s: 6.463201645644522
+  batch_size: 256
+
+# Recorded trial 741, test MAE 0.174340182.
+ili:
+  <<: *short_term
+  learning_rate: 0.018029912113036985
+  decay_rate: 0.0008855621931904651
+  beta1: 0.9
+  beta2: 0.999
+  hidden_size: 32
+  signal_len: 8
+  cheb_order: 3
+  k: 2
+  s: 5.729109951454187
+  batch_size: 256
+
+# Recorded trial 749, test MAE 0.059459284.
+nasdaq:
+  <<: *short_term
+  learning_rate: 0.02691193523348599
+  decay_rate: 1.4273119175502483e-05
+  beta1: 0.9
+  beta2: 0.999
+  hidden_size: 16
+  signal_len: 16
+  cheb_order: 3
+  k: 4
+  s: 8.039060334305164
+  batch_size: 16
+
+# Recorded trial 500, test MAE 0.087511338.
+nn5:
+  <<: *short_term
+  scheduler_patience: 10
+  learning_rate: 0.017565252134482894
+  decay_rate: 1.3158550607079963e-05
+  beta1: 0.9
+  beta2: 0.999
+  hidden_size: 64
+  signal_len: 16
+  cheb_order: 2
+  k: 6
+  s: 8.042220273492411
+  batch_size: 32
+
+# Recorded trial 126, test MAE 0.023914661.
+nyse:
+  <<: *short_term
+  learning_rate: 0.02745361950127975
+  decay_rate: 3.0183399924827052e-05
+  beta1: 0.9
+  beta2: 0.999
+  hidden_size: 16
+  signal_len: 16
+  cheb_order: 3
+  k: 4
+  s: 7.014701763605402
+  batch_size: 128
+
+# Recorded trial 117, test MAE 0.415436383.
+ETTh1_96: &ett
+  seq_len: 336
+  pred_len: 96
+  embed_size: 256
+  train_epochs: 150
+  scheduler_patience: 30
+  long_pred: 1
+  checkpoint_selection: last
+  learning_rate: 0.045241377251643976
+  decay_rate: 0.0008266264925651666
+  beta1: 0.95
+  beta2: 0.99
+  hidden_size: 32
+  signal_len: 16
+  cheb_order: 2
+  k: 4
+  s: 2.925193858638907
+  batch_size: 64
+
+# Recorded trial 219, test MAE 0.441839204.
+ETTh1_192:
+  <<: *ett
+  pred_len: 192
+  learning_rate: 0.04110851901334397
+  decay_rate: 0.0008746379813971581
+  beta1: 0.95
+  beta2: 0.99
+  hidden_size: 32
+  signal_len: 16
+  cheb_order: 2
+  k: 6
+  s: 8.58643967231767
+  batch_size: 64
+
+# Recorded trial 137, test MAE 0.462497787.
+ETTh1_336:
+  <<: *ett
+  pred_len: 336
+  learning_rate: 0.025544383193548584
+  decay_rate: 0.0021062778814700256
+  beta1: 0.95
+  beta2: 0.99
+  hidden_size: 64
+  signal_len: 16
+  cheb_order: 3
+  k: 2
+  s: 5.967230786742115
+  batch_size: 32
+
+# Recorded trial 184, test MAE 0.551777829.
+ETTh1_720:
+  <<: *ett
+  pred_len: 720
+  learning_rate: 0.048459706039858975
+  decay_rate: 0.0041036324386013075
+  beta1: 0.95
+  beta2: 0.95
+  hidden_size: 64
+  signal_len: 32
+  cheb_order: 2
+  k: 4
+  s: 9.989763892310021
+  batch_size: 32
+
+# Recorded trial 102, test MAE 0.357620703.
+ETTm1_96:
+  <<: *ett
+  pred_len: 96
+  learning_rate: 0.005088404350865497
+  decay_rate: 0.00015264015988604982
+  beta1: 0.95
+  beta2: 0.99
+  hidden_size: 64
+  signal_len: 16
+  cheb_order: 3
+  k: 2
+  s: 4.993544538264553
+  batch_size: 64
+
+# Recorded trial 158, test MAE 0.380698227.
+ETTm1_192:
+  <<: *ett
+  pred_len: 192
+  learning_rate: 0.04333942672839446
+  decay_rate: 0.0010733178976026448
+  beta1: 0.9
+  beta2: 0.999
+  hidden_size: 16
+  signal_len: 128
+  cheb_order: 2
+  k: 6
+  s: 3.2216847391036576
+  batch_size: 128
+
+# Recorded trial 117, test MAE 0.420837312.
+ETTm1_336:
+  <<: *ett
+  pred_len: 336
+  learning_rate: 0.00975910431819054
+  decay_rate: 0.0009384498811212507
+  beta1: 0.95
+  beta2: 0.95
+  hidden_size: 32
+  signal_len: 128
+  cheb_order: 2
+  k: 4
+  s: 2.7580110057107126
+  batch_size: 64
+
+# Recorded trial 32, test MAE 0.469656441.
+ETTm1_720:
+  <<: *ett
+  pred_len: 720
+  learning_rate: 0.004596011225504201
+  decay_rate: 0.003521177939387203
+  beta1: 0.9
+  beta2: 0.999
+  hidden_size: 32
+  signal_len: 16
+  cheb_order: 2
+  k: 4
+  s: 3.404794820254105
+  batch_size: 32
